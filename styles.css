@@ -1,101 +1,57 @@
-/* Estilos Generales */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    background-color: #F4F7FC;
-}
-
-/* Contenedor Principal */
-.container {
-    display: flex;
-    min-height: 100vh;
-}
-
-/* Barra Lateral */
-.sidebar {
-    width: 250px;
-    background-color: #2C3E50;
-    padding: 20px;
-    color: white;
-}
-
-/* Título del Menú */
-.sidebar h2 {
-    font-size: 20px;
-    text-align: left;
-}
-
-/* Menú Principal */
-.menu {
-    list-style: none;
-    padding: 0;
-}
-
-.menu li {
-    margin-bottom: 10px;
-}
-
-.menu a {
-    text-decoration: none;
-    color: white;
-    display: block;
-    padding: 8px;
-    border-radius: 4px;
-    background-color: #34495E;
-}
-
-.menu a:hover {
-    background-color: #1F2C3A;
-}
-
-/* Submenú */
-.submenu {
-    list-style: none;
-    padding-left: 20px;
-}
-
-.submenu a {
-    font-size: 14px;
-    background-color: #3A506B;
-}
-
-/* Contenido Principal */
-.content {
-    flex: 1;
-    padding: 40px;
 }
 
 h1 {
-    color: #2C3E50;
-    font-size: 28px;
+    color: #333;
+    text-align: center;
+    padding: 20px;
 }
 
-p {
-    font-size: 16px;
-    color: #555;
-}
-
-/* Lista de Enlaces */
-.resource-links {
-    list-style: none;
+ul {
+    list-style-type: none;
     padding: 0;
 }
 
-.resource-links li {
-    margin-bottom: 10px;
+ul li {
+    padding: 10px;
+    font-size: 18px;
 }
 
-.resource-links a {
+ul li a {
     text-decoration: none;
-    color: #2C3E50;
+    color: #1a73e8;
     font-weight: bold;
-    padding: 8px 12px;
-    display: inline-block;
-    background-color: #ECF0F1;
-    border-radius: 4px;
 }
 
-.resource-links a:hover {
-    background-color: #BDC3C7;
+ul li a:hover {
+    color: #f39c12;
+}
+
+.menu {
+    background: #2c3e50;
+    width: 250px;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    color: white;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+}
+
+.menu a:hover {
+    background: #34495e;
+}
+
+.content {
+    margin-left: 270px;
+    padding: 20px;
 }
