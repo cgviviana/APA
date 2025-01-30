@@ -4,23 +4,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
     enlaces.forEach(enlace => {
         enlace.addEventListener("click", function (e) {
-            e.preventDefault(); 
+            e.preventDefault();
             const ruta = this.getAttribute("data-page");
 
-            // Verifica si el archivo realmente existe antes de cargarlo
+            // Verificar si el archivo existe antes de cargarlo
             fetch(ruta)
                 .then(response => {
                     if (!response.ok) {
-                        throw new Error(`No se encontró el archivo en la ruta: ${ruta}`);
+                        throw new Error(`Error al cargar el contenido desde: ${ruta}`);
                     }
                     return response.text();
                 })
                 .then(data => {
-                    // Extraer solo el contenido dentro del <body> del archivo HTML cargado
                     const tempDiv = document.createElement("div");
                     tempDiv.innerHTML = data;
+
+                    // Extraer solo el contenido del <body> del archivo cargado
                     const nuevoContenido = tempDiv.querySelector("body") ? tempDiv.querySelector("body").innerHTML : data;
-                    
+
                     contenedor.innerHTML = nuevoContenido;
                 })
                 .catch(error => {
