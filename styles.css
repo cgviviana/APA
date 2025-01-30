@@ -1,65 +1,32 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos sobre Normas APA</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Barra lateral -->
+    <div class="sidebar">
+        <h2>Aprendiendo con La Profe Vivy</h2>
+        <nav>
+            <ul>
+                <li><a href="#" data-page="Etica/index.html">Ética</a></li>
+                <li><a href="#" data-page="Citacion/index.html">Citación</a></li>
+                <li><a href="#" data-page="Referenciacion/index.html">Referenciación</a></li>
+            </ul>
+        </nav>
+    </div>
 
-/* Barra lateral */
-.sidebar {
-    width: 250px;
-    height: 100vh;
-    background: #1d3557;
-    color: white;
-    padding: 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow-y: auto;
-}
-
-.sidebar h2 {
-    text-align: center;
-    font-size: 18px;
-    margin-bottom: 20px;
-}
-
-.sidebar nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar nav ul li {
-    padding: 10px 0;
-}
-
-.sidebar nav ul li a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    padding: 8px;
-    border-radius: 4px;
-    transition: background 0.3s;
-}
-
-.sidebar nav ul li a:hover {
-    background: #457b9d;
-}
-
-/* Contenido principal */
-.content {
-    margin-left: 280px; /* Ajuste para separar el contenido */
-    padding: 40px;
-    width: calc(100% - 280px);
-    box-sizing: border-box;
-}
-
-h1 {
-    color: #333;
-}
-
-p {
-    font-size: 16px;
-    color: #555;
-}
+    <!-- Contenido principal -->
+    <div class="content">
+        <h1>Recursos sobre Normas APA</h1>
+        <p>Bienvenido a este sitio donde encontrarás información relevante sobre normas APA.</p>
+        <div id="contenido-dinamico">
+            <p>Haz clic en los enlaces del menú para visualizar el contenido.</p>
+        </div>
+    </div>
+</body>
+</html>
