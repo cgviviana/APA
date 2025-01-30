@@ -7,16 +7,21 @@ document.addEventListener("DOMContentLoaded", function () {
             e.preventDefault(); 
             const ruta = this.getAttribute("data-page");
 
-            // Cargar el contenido de la carpeta dentro del contenedor
+            // Verifica si el archivo realmente existe antes de cargarlo
             fetch(ruta)
                 .then(response => {
                     if (!response.ok) {
-                        throw new Error('No se encontró la página');
+                        throw new Error(`No se encontró el archivo en la ruta: ${ruta}`);
                     }
                     return response.text();
                 })
                 .then(data => {
-                    contenedor.innerHTML = data;
+                    // Extraer solo el contenido dentro del <body> del archivo HTML cargado
+                    const tempDiv = document.createElement("div");
+                    tempDiv.innerHTML = data;
+                    const nuevoContenido = tempDiv.querySelector("body") ? tempDiv.querySelector("body").innerHTML : data;
+                    
+                    contenedor.innerHTML = nuevoContenido;
                 })
                 .catch(error => {
                     contenedor.innerHTML = `<p style="color: red;">Error al cargar el contenido: ${error.message}</p>`;
