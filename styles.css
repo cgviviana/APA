@@ -6,44 +6,56 @@ body {
     display: flex;
 }
 
+/* Estilos de la barra lateral */
 .sidebar {
-    background: #1a2b44;
     width: 250px;
     height: 100vh;
-    padding: 20px;
+    background: #1d3557;
     color: white;
+    padding: 20px;
     position: fixed;
-    left: 0;
-    top: 0;
 }
 
 .sidebar h2 {
-    font-size: 20px;
     text-align: center;
+    font-size: 18px;
     margin-bottom: 20px;
 }
 
-.menu {
+.sidebar nav ul {
     list-style: none;
     padding: 0;
 }
 
-.menu a {
-    display: block;
+.sidebar nav ul li {
+    padding: 10px 0;
+}
+
+.sidebar nav ul li a {
     color: white;
     text-decoration: none;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
+    display: block;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background 0.3s;
 }
 
-.menu a:hover {
-    background: #34495e;
+.sidebar nav ul li a:hover {
+    background: #457b9d;
 }
 
+/* Contenido principal */
 .content {
     margin-left: 270px;
-    padding: 30px;
-    flex-grow: 1;
-    background: white;
+    padding: 40px;
+    width: calc(100% - 270px);
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    color: #555;
 }
