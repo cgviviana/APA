@@ -4,9 +4,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     links.forEach(link => {
         link.addEventListener("click", function (event) {
-            event.preventDefault(); // Evita que la página recargue
+            event.preventDefault();
             const page = this.getAttribute("data-page");
-            contentFrame.src = page; // Carga la página en el iframe
+
+            // Verifica si el archivo realmente existe antes de cargarlo
+            fetch(page, { method: 'HEAD' })
+                .then(response => {
+                    if (response.ok) {
+                        contentFrame.src = page;
+                    } else {
+                        console.error("Error: La página no existe.");
+                        contentFrame.src = "error.html"; // Página de error opcional
+                    }
+                })
+                .catch(error => {
+                    console.error("Error al cargar la página:", error);
+                });
         });
     });
 });
