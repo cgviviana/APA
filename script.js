@@ -5,16 +5,21 @@ document.addEventListener("DOMContentLoaded", function () {
     enlaces.forEach(enlace => {
         enlace.addEventListener("click", function (e) {
             e.preventDefault(); 
-            const carpeta = this.getAttribute("data-page");
+            const ruta = this.getAttribute("data-page");
 
             // Cargar el contenido de la carpeta dentro del contenedor
-            fetch(`./${carpeta}/index.html`)
-                .then(response => response.text())
+            fetch(ruta)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('No se encontró la página');
+                    }
+                    return response.text();
+                })
                 .then(data => {
                     contenedor.innerHTML = data;
                 })
                 .catch(error => {
-                    contenedor.innerHTML = "<p>Error al cargar el contenido.</p>";
+                    contenedor.innerHTML = `<p style="color: red;">Error al cargar el contenido: ${error.message}</p>`;
                 });
         });
     });
