@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Mural de Herramientas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Banner de imagen */
+        .banner {
+            background-image: url('u.png'); /* Imagen de banner */
+            background-size: cover;
+            background-position: center;
+            height: 400px; /* Altura del banner */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Título dentro del banner */
+        .banner h1 {
+            color: white;
+            font-size: 48px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+
+        /* Estilos para el contenedor principal */
+        .main-content {
+            padding: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* Estilos para el texto principal */
+        .main-content p {
+            color: #333;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        strong {
+            color: #333;
+        }
+
+        /* Botón para abrir la barra lateral */
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 2;
+        }
+
+        .openbtn:hover {
+            background-color: #444;
+        }
+
+        /* Barra lateral */
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #333;
+            padding-top: 20px;
+            transition: 0.5s;
+            overflow-x: hidden;
+        }
+
+        .sidenav a {
+            padding: 10px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #f1f1f1;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidenav a:hover {
+            color: #f39c12;
+        }
+
+        .dropdown-btn {
+            font-size: 18px;
+            border: none;
+            background: none;
+            color: #f1f1f1;
+            padding: 10px 20px;
+            text-align: left;
+            cursor: pointer;
+            outline: none;
+            width: 100%;
+            display: block;
+        }
+
+        .dropdown-btn:hover {
+            color: #f39c12;
+        }
+
+        .dropdown-container {
+            display: none;
+            background-color: #444;
+            padding-left: 20px;
+        }
+
+        .dropdown-container a {
+            font-size: 16px;
+        }
+
+        /* Diseño responsive */
+        @media screen and (max-width: 768px) {
+            .main-content {
+                padding: 20px;
+            }
+
+            .banner h1 {
+                font-size: 36px;
+            }
+
+            .main-content p {
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .banner {
+                height: 300px;
+            }
+
+            .banner h1 {
+                font-size: 28px;
+            }
+
+            .main-content p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <button class="openbtn" onclick="openNav()">☰ Menú</button>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Inicio</a>
+        <a href="objetivo.html">Objetivo</a>
+        <button class="dropdown-btn">Unidades &#9660;</button>
+        <div class="dropdown-container">
+            <a href="unidad1.html">Unidad 1</a>
+            <a href="unidad2.html">Unidad 2</a>
+            <a href="unidad3.html">Unidad 3</a>
+            <a href="unidad4.html">Unidad 4</a>
+        </div>
+        <a href="novedades.html">Novedades</a>
+        <a href="aportes.html">Aportes</a>
+    </div>
+
+    <!-- Banner con la imagen -->
+    <div class="banner">
+        <h1>Bienvenidos al Mural de Herramientas</h1>
+    </div>
+
+    <!-- Contenido principal debajo del banner -->
+    <div class="main-content">
+        <div class="welcome-section">
+            <p>Profe, este espacio ha sido creado con dedicación y compromiso por formadores de docentes como tú, con el objetivo de acompañarte a lo largo del diplomado. Sabemos que enseñar es un arte lleno de desafíos, y en este mural encontrarás herramientas prácticas y accesibles que te ayudarán a potenciar tu labor diaria. Hemos seleccionado cuidadosamente cada recurso para que puedas poner en práctica lo aprendido en el diplomado y aplicarlo directamente en tu quehacer profesional.</p>
+            
+            <p>Aquí no solo encontrarás respuestas, sino también nuevas formas de innovar, explorar y enriquecer tus estrategias pedagógicas. Nos hemos asegurado de que cada herramienta te proporcione el apoyo necesario para que sigas creciendo como profesional y educador, con la convicción de que la educación transforma vidas.</p>
+            
+            <p>Te invitamos a explorar este mural con la certeza de que, como profes, hemos preparado este espacio pensando en las necesidades reales que enfrentamos día a día en el aula. Juntos, podemos seguir construyendo un futuro lleno de oportunidades, donde cada herramienta sea una llave para abrir puertas a la creatividad, la innovación y el aprendizaje continuo.</p>
+            
+            <p><strong>¡Gracias por ser parte de este proceso! Estamos aquí para apoyarte en cada paso de este camino.</strong></p>
+        </div>
+    </div>
+
+    <script>
+        /* Función para abrir la barra lateral */
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
+
+        /* Función para cerrar la barra lateral */
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+        /* Función para el menú desplegable */
+        var dropdown = document.querySelector('.dropdown-btn');
+        var dropdownContainer = document.querySelector('.dropdown-container');
+
+        dropdown.addEventListener('click', function() {
+            dropdownContainer.style.display = dropdownContainer.style.display === 'block' ? 'none' : 'block';
+        });
+    </script>
+
+</body>
+</html>
