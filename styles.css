@@ -1,67 +1,42 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
     display: flex;
+    background-color: #f4f4f4;
 }
 
-/* Barra lateral */
-.sidebar {
+.menu {
     width: 250px;
     height: 100vh;
-    background: #1d3557;
+    background: #1b3a57;
     color: white;
     padding: 20px;
     position: fixed;
-    top: 0;
-    left: 0;
-    overflow-y: auto;
 }
 
-.sidebar h2 {
-    text-align: center;
+.menu h2 {
     font-size: 18px;
-    margin-bottom: 20px;
+    text-align: center;
 }
 
-.sidebar nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-.sidebar nav ul li {
-    padding: 10px 0;
-}
-
-.sidebar nav ul li a {
-    color: white;
+.menu a {
     text-decoration: none;
+    color: white;
     display: block;
-    padding: 8px;
-    border-radius: 4px;
-    transition: background 0.3s;
+    padding: 10px;
 }
 
-.sidebar nav ul li a:hover {
-    background: #457b9d;
+.menu a:hover {
+    background: #34495e;
 }
 
-/* Contenido principal */
 .content {
-    margin-left: 280px; /* Espacio para que no quede pegado */
-    padding: 40px;
+    margin-left: 280px;  /* Ahora hay más espacio */
+    padding: 20px;
     width: calc(100% - 280px);
-    box-sizing: border-box;
-    min-height: 100vh;
-    background: white;
 }
 
 h1 {
     color: #333;
-}
-
-p {
-    font-size: 16px;
-    color: #555;
 }
