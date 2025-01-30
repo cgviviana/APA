@@ -49,7 +49,7 @@ body {
 
 /* Contenido principal */
 .content {
-    margin-left: 280px; /* Separación mejorada */
+    margin-left: 280px; /* Espacio para que no quede pegado */
     padding: 40px;
     width: calc(100% - 280px);
     box-sizing: border-box;
