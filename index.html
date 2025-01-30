@@ -5,33 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recursos sobre Normas APA</title>
     <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
 </head>
 <body>
-
-    <!-- Barra lateral -->
     <div class="sidebar">
         <h2>Aprendiendo con La Profe Vivy</h2>
-        <ul>
-            <li><a href="#" onclick="mostrarSeccion('etica')">Ética</a></li>
-            <li><a href="#" onclick="mostrarSeccion('citacion')">Citación</a></li>
-            <li><a href="#" onclick="mostrarSeccion('referenciacion')">Referenciación</a></li>
-        </ul>
+        <nav class="menu">
+            <a href="Etica/index.html">Ética</a>
+            <a href="Citacion/index.html">Citación</a>
+            <a href="Referenciación/index.html">Referenciación</a>
+        </nav>
     </div>
 
-    <!-- Contenedor del contenido dinámico -->
-    <div class="content">
-        <h1 id="titulo">Recursos sobre Normas APA</h1>
-        <p id="descripcion">Bienvenido a este sitio donde encontrarás información relevante sobre normas APA.</p>
-        
-        <div id="contenido">
-            <ul>
-                <li>📌 <a href="#" onclick="mostrarSeccion('citacion')">Citación</a></li>
-                <li>📌 <a href="#" onclick="mostrarSeccion('referenciacion')">Referenciación</a></li>
-                <li>📌 <a href="#" onclick="mostrarSeccion('etica')">Ética</a></li>
-            </ul>
-        </div>
+    <div class="content" id="content">
+        <h1>Recursos sobre Normas APA</h1>
+        <p>Bienvenido a este sitio donde encontrarás información relevante sobre normas APA.</p>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>
